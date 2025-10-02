@@ -24,21 +24,21 @@ A production-ready REST API for a simple bookings platform called BookIt. Users 
    ```
 
 4. **Access the application:**
-   The application will be running at `http://127.0.0.1:8000`.
+   The application will be running at `https://bookit-yk47.onrender.com/docs`.
 
 ## API Documentation
 
 FastAPI automatically generates interactive API documentation. You can access it at:
 
-- **Swagger UI:** `http://127.0.0.1:8000/docs`
-- **ReDoc:** `http://127.0.0.1:8000/redoc`
+- **Swagger UI:** `https://bookit-yk47.onrender.com/docs`
+- **ReDoc:** `https://bookit-yk47.onrender.com/redoc`
 
 ## Environment Variables
 
 | Variable                  | Description                                       | Example Value                                   |
 | ------------------------- | ------------------------------------------------- | ----------------------------------------------- |
-| `DATABASE_URL`            | The connection string for the PostgreSQL database.  | `postgresql://user:password@postgresserver/db`  |
-| `SECRET_KEY`              | The secret key for signing JWTs.                  | `your-super-secret-key-that-is-long-and-random` |
+| `DATABASE_URL`            | The connection string for the PostgreSQL database.  | `postgresql://book_it_3ygm_user:9EfpE8o7vT8TIjVZnU7q2AYDih32PkIz@dpg-d3f6h3vfte5s73bnl7m0-a/book_it_3ygm`  |
+| `SECRET_KEY`              | The secret key for signing JWTs.                  | `kjadnvakjdsbvvadfvdfvlkfdv` |
 | `ALGORITHM`               | The algorithm used for signing JWTs.              | `HS256`                                         |
 | `ACCESS_TOKEN_EXPIRE_MINUTES` | The expiration time for access tokens in minutes. | `30`                                            |
 
@@ -60,4 +60,4 @@ You will need to configure the environment variables listed above in the Render 
 
 ### Base URL
 
-The base URL for the application will be provided by Render when you create the web service (e.g., `https://your-app-name.onrender.com`).
+`(https://bookit-yk47.onrender.com)`).
