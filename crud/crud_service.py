@@ -14,7 +14,7 @@ class CRUDService:
             is_active=service.is_active,
         )
         db.add(db_service)
-        db.commit()
+        db.flush()
         db.refresh(db_service)
         return db_service
 
@@ -52,7 +52,7 @@ class CRUDService:
         update_data = service_in.dict(exclude_unset=True)
         for key, value in update_data.items():
             setattr(db_service, key, value)
-        db.commit()
+        db.flush()
         db.refresh(db_service)
         return db_service
 
@@ -61,3 +61,6 @@ class CRUDService:
         db.delete(db_service)
         db.commit()
         return db_service
+    
+    
+service_service = CRUDService()

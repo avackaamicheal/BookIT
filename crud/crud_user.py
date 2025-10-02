@@ -23,9 +23,9 @@ class CRUDUser:
         db_user = User(
             email=user.email, 
             name=user.name, 
-            hashed_password=hashed_password)
+            password_hash=hashed_password)
         db.add(db_user)
-        db.commit()
+        db.flush()
         db.refresh(db_user)
         return db_user
 
@@ -35,7 +35,7 @@ class CRUDUser:
             db_user.name = user_in.name
         if user_in.email:
             db_user.email = user_in.email
-        db.commit()
+        db.flush()
         db.refresh(db_user)
         return db_user
 
